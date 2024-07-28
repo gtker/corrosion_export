@@ -1,0 +1,8 @@
+[package]
+name = "is_odd"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "is_odd"
+crate-type = ["cdylib", "staticlib"]

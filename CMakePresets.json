@@ -1,0 +1,53 @@
+{
+  "version": 4,
+  "configurePresets": [
+    {
+      "name": "add-subdir-static",
+      "displayName": "Static library using add_subdirectory",
+      "binaryDir": "cmake-add-subdir-static"
+    },
+    {
+      "name": "add-subdir-shared",
+      "displayName": "Shared library using add_subdirectory",
+      "binaryDir": "cmake-add-subdir-shared",
+      "cacheVariables": {
+        "BUILD_SHARED_LIBS": true
+      }
+    },
+    {
+      "name": "find-package-static",
+      "displayName": "Static library using find_package. Remember to install somewhere and set CMAKE_PREFIX_PATH.",
+      "binaryDir": "cmake-find-package-static",
+      "cacheVariables": {
+        "USER_FIND_PACKAGE": true
+      }
+    },
+    {
+      "name": "find-package-shared",
+      "displayName": "Shared library using add_subdirectory. Remember to install somewhere and set CMAKE_PREFIX_PATH.",
+      "binaryDir": "cmake-find-package-shared",
+      "cacheVariables": {
+        "BUILD_SHARED_LIBS": true,
+        "USER_FIND_PACKAGE": true
+      }
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "add-subdir-static",
+      "configurePreset": "add-subdir-static"
+    },
+    {
+      "name": "add-subdir-shared",
+      "configurePreset": "add-subdir-shared"
+    },
+    {
+      "name": "find-package-static",
+      "configurePreset": "find-package-static"
+    },
+    {
+      "name": "find-package-shared",
+      "configurePreset": "find-package-shared"
+    }
+  ]
+}

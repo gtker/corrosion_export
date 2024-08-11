@@ -1,0 +1,3 @@
+[submodule "is_odd/corrosion"]
+	path = is_odd/corrosion
+	url = https://github.com/corrosion-rs/corrosion
